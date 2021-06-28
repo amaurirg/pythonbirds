@@ -38,7 +38,7 @@ class Ator():
         :param tempo: o tempo do jogo
         :return: posição x, y do ator
         """
-        return 1, 1
+        return self.x, self.y
 
     def colidir(self, outro_ator, intervalo=1):
         """
@@ -52,16 +52,42 @@ class Ator():
         :param intervalo: Intervalo a ser considerado
         :return:
         """
-        pass
+        # if (self.x == outro_ator.x or self.x + intervalo == outro_ator.x or self.x - intervalo == outro_ator.x
+        #         or self.y + intervalo == outro_ator.y or self.y - intervalo == outro_ator.y):
 
+        # if ((self.x == outro_ator.x and (self.y + intervalo == outro_ator.y or self.y - intervalo == outro_ator.y)) or
+        #     (self.y == outro_ator.y and (self.x + intervalo == outro_ator.x or self.x - intervalo == outro_ator.x)) or
+        #     (self.x == outro_ator.x and self.y == outro_ator.y)):
+
+        if self.status == ATIVO and outro_ator.status == ATIVO:
+
+            t_self = (self.x, self.y)
+            t_outro_ator = (outro_ator.x, outro_ator.y)
+            t1 = (self.x, self.y - intervalo)
+            t2 = (self.x, self.y + intervalo)
+
+            t3 = (self.x - intervalo, self.y - intervalo)
+            t4 = (self.x - intervalo, self.y)
+            t5 = (self.x - intervalo, self.y + intervalo)
+
+            t6 = (self.x + intervalo, self.y - intervalo)
+            t7 = (self.x + intervalo, self.y)
+            t8 = (self.x + intervalo, self.y + intervalo)
+
+            # trocar 1 por intervalo
+
+            if t_outro_ator in [t1, t2, t3, t4, t5, t6, t7, t8] or t_self == t_outro_ator:
+                self.status = DESTRUIDO
+                outro_ator.status = DESTRUIDO
 
 
 class Obstaculo(Ator):
-    pass
+    _caracter_ativo = 'O'
 
 
 class Porco(Ator):
-    pass
+    _caracter_ativo = '@'
+    _caracter_destruido =  '+'
 
 
 class DuploLancamentoExcecao(Exception):
@@ -118,7 +144,6 @@ class Passaro(Ator):
         :return: posição x, y
         """
         return 1, 1
-
 
     def lancar(self, angulo, tempo_de_lancamento):
         """
