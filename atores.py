@@ -52,33 +52,32 @@ class Ator():
         :param intervalo: Intervalo a ser considerado
         :return:
         """
-        # if (self.x == outro_ator.x or self.x + intervalo == outro_ator.x or self.x - intervalo == outro_ator.x
-        #         or self.y + intervalo == outro_ator.y or self.y - intervalo == outro_ator.y):
+        if self.status == DESTRUIDO or outro_ator.status == DESTRUIDO:
+            return
 
-        # if ((self.x == outro_ator.x and (self.y + intervalo == outro_ator.y or self.y - intervalo == outro_ator.y)) or
-        #     (self.y == outro_ator.y and (self.x + intervalo == outro_ator.x or self.x - intervalo == outro_ator.x)) or
-        #     (self.x == outro_ator.x and self.y == outro_ator.y)):
+        if abs(self.x - outro_ator.x) <= intervalo and abs(
+                self.y - outro_ator.y) <= intervalo:
+            self.status = DESTRUIDO
+            outro_ator.status = DESTRUIDO
 
-        if self.status == ATIVO and outro_ator.status == ATIVO:
-
-            t_self = (self.x, self.y)
-            t_outro_ator = (outro_ator.x, outro_ator.y)
-            t1 = (self.x, self.y - intervalo)
-            t2 = (self.x, self.y + intervalo)
-
-            t3 = (self.x - intervalo, self.y - intervalo)
-            t4 = (self.x - intervalo, self.y)
-            t5 = (self.x - intervalo, self.y + intervalo)
-
-            t6 = (self.x + intervalo, self.y - intervalo)
-            t7 = (self.x + intervalo, self.y)
-            t8 = (self.x + intervalo, self.y + intervalo)
-
-            # trocar 1 por intervalo
-
-            if t_outro_ator in [t1, t2, t3, t4, t5, t6, t7, t8] or t_self == t_outro_ator:
-                self.status = DESTRUIDO
-                outro_ator.status = DESTRUIDO
+        # if self.status == ATIVO and outro_ator.status == ATIVO:
+        #
+        #     t_self = (self.x, self.y)
+        #     t_outro_ator = (outro_ator.x, outro_ator.y)
+        #     t1 = (self.x, self.y - intervalo)
+        #     t2 = (self.x, self.y + intervalo)
+        #
+        #     t3 = (self.x - intervalo, self.y - intervalo)
+        #     t4 = (self.x - intervalo, self.y)
+        #     t5 = (self.x - intervalo, self.y + intervalo)
+        #
+        #     t6 = (self.x + intervalo, self.y - intervalo)
+        #     t7 = (self.x + intervalo, self.y)
+        #     t8 = (self.x + intervalo, self.y + intervalo)
+        #
+        #     if t_outro_ator in [t1, t2, t3, t4, t5, t6, t7, t8] or t_self == t_outro_ator:
+        #         self.status = DESTRUIDO
+        #         outro_ator.status = DESTRUIDO
 
 
 class Obstaculo(Ator):
@@ -119,6 +118,8 @@ class Passaro(Ator):
 
         :return: booleano
         """
+        if self.lancar is False:
+            return False
         return True
 
     def colidir_com_chao(self):
@@ -127,7 +128,8 @@ class Passaro(Ator):
         o status dos Passaro deve ser alterado para destruido, bem como o seu caracter
 
         """
-        pass
+        self.status = DESTRUIDO if self.y <= 0 else ATIVO
+        # _ca= self.caracter
 
     def calcular_posicao(self, tempo):
         """
@@ -154,12 +156,15 @@ class Passaro(Ator):
         :param tempo_de_lancamento:
         :return:
         """
-        pass
+        return True
 
 
 class PassaroAmarelo(Passaro):
-    pass
+    _caracter_destruido = 'a'
+    velocidade_escalar = 30
 
 
 class PassaroVermelho(Passaro):
-    pass
+    _caracter_ativo = 'V'
+    _caracter_destruido = 'v'
+    velocidade_escalar = 20
