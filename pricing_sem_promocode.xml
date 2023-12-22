@@ -1,0 +1,858 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap-env:Header>
+        <eb:MessageHeader eb:version="1.0" soap-env:mustUnderstand="1"
+                          xmlns:eb="http://www.ebxml.org/namespaces/messageHeader">
+            <eb:From>
+                <eb:PartyId eb:type="URI">WebServiceSupplier</eb:PartyId>
+            </eb:From>
+            <eb:To>
+                <eb:PartyId eb:type="URI">WebServiceClient</eb:PartyId>
+            </eb:To>
+            <eb:CPAId>G3</eb:CPAId>
+            <eb:ConversationId>ECOMPONENT</eb:ConversationId>
+            <eb:Service>EnhancedAirBookRQ</eb:Service>
+            <eb:Action>EnhancedAirBookRS</eb:Action>
+            <eb:MessageData>
+                <eb:MessageId>2fw3he0o3</eb:MessageId>
+                <eb:Timestamp>2023-08-28T23:46:48</eb:Timestamp>
+                <eb:RefToMessageId>teste@e-component.com</eb:RefToMessageId>
+            </eb:MessageData>
+        </eb:MessageHeader>
+        <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+            <wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">
+                Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESG!ICESMSLB\/RES.LB!1693266400944!4913!805
+            </wsse:BinarySecurityToken>
+        </wsse:Security>
+    </soap-env:Header>
+    <soap-env:Body>
+        <EnhancedAirBookRS xmlns="http://services.sabre.com/sp/eab/v3_10">
+            <ApplicationResults status="Complete" xmlns="http://services.sabre.com/STL_Payload/v02_01"
+                                xmlns:ns2="http://services.sabre.com/essm/diagnostic/v1"
+                                xmlns:ns3="http://services.sabre.com/essm/core/v1"
+                                xmlns:ns4="http://services.sabre.com/STL_Payload/v02_02"
+                                xmlns:ns5="http://opentravel.org/common/v02"
+                                xmlns:ns6="http://opentravel.org/common/message/v02"
+                                xmlns:ns7="http://services.sabre.com/sp/ssp/v1"
+                                xmlns:ns8="http://services.sabre.com/STL_Header/v02_02"
+                                xmlns:ns9="http://services.sabre.com/essm/session/v1"
+                                xmlns:ns10="http://services.sabre.com/STL_Header/v120"
+                                xmlns:ns11="http://services.sabre.com/STL_Header/v02_01"
+                                xmlns:ns12="http://webservices.sabre.com/servicesplatform/eiapi/1.0.0"
+                                xmlns:ns13="http://www.OpenTravel.org/ns/OTA2/AppInfo_v01_00"
+                                xmlns:ns14="http://services.sabre.com/sp/preferences/v1"
+                                xmlns:ns15="http://services.sabre.com/STL/v01"
+                                xmlns:ns16="http://services.sabre.com/ssse/trace/v01">
+                <Success timeStamp="2023-08-28T18:46:48.160-05:00"/>
+            </ApplicationResults>
+            <OTA_AirBookRS>
+                <OriginDestinationOption>
+                    <FlightSegment Status="SS" eTicket="true" DepartureDateTime="10-23T07:30"
+                                   ArrivalDateTime="10-23T08:35" FlightNumber="1010" NumberInParty="001"
+                                   ResBookDesigCode="B">
+                        <DestinationLocation LocationCode="SDU"/>
+                        <MarketingAirline FlightNumber="1010" Code="G3"/>
+                        <OriginLocation LocationCode="CGH"/>
+                    </FlightSegment>
+                    <FlightSegment Status="SS" eTicket="true" DepartureDateTime="10-25T06:05"
+                                   ArrivalDateTime="10-25T07:10" FlightNumber="1003" NumberInParty="001"
+                                   ResBookDesigCode="O">
+                        <DestinationLocation LocationCode="CGH"/>
+                        <MarketingAirline FlightNumber="1003" Code="G3"/>
+                        <OriginLocation LocationCode="SDU"/>
+                    </FlightSegment>
+                </OriginDestinationOption>
+            </OTA_AirBookRS>
+            <OTA_AirPriceRS>
+                <PriceQuote>
+                    <MiscInformation>
+                        <BaggageInfo>
+                            <SubCodeProperties RPH="1" SolutionSequenceNmbr="1">
+                                <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                                <CommercialNameofBaggageItemType>PRIMEIRA BAGAGEM</CommercialNameofBaggageItemType>
+                                <DescriptionOne Code="23">
+                                    <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+                                </DescriptionOne>
+                                <EMD_Type>2</EMD_Type>
+                                <ExtendedSubCodeKey>0C3ACG3</ExtendedSubCodeKey>
+                                <RFIC>C</RFIC>
+                                <SizeWeightInfo>
+                                    <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+                                    <MaximumWeight Units="L">50</MaximumWeight>
+                                </SizeWeightInfo>
+                            </SubCodeProperties>
+                            <SubCodeProperties RPH="2" SolutionSequenceNmbr="1">
+                                <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                                <CommercialNameofBaggageItemType>FREE BAGGAGE ALLOWANCE
+                                </CommercialNameofBaggageItemType>
+                                <EMD_Type>4</EMD_Type>
+                                <ExtendedSubCodeKey>0DFAAG3</ExtendedSubCodeKey>
+                            </SubCodeProperties>
+                            <SubCodeProperties RPH="3" SolutionSequenceNmbr="1">
+                                <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                                <CommercialNameofBaggageItemType>SEGUNDA BAGAGEM</CommercialNameofBaggageItemType>
+                                <DescriptionOne Code="23">
+                                    <Text>UP TO 50 POUNDS/23 KILOGRAMS</Text>
+                                </DescriptionOne>
+                                <DescriptionTwo Code="2A">
+                                    <Text>MAX LENGTH UP TO 59 INCHES/150 CENTIMETERS</Text>
+                                </DescriptionTwo>
+                                <EMD_Type>2</EMD_Type>
+                                <ExtendedSubCodeKey>0JTACG3</ExtendedSubCodeKey>
+                                <RFIC>C</RFIC>
+                                <SizeWeightInfo>
+                                    <MaximumSizeInAlternate Units="C">150</MaximumSizeInAlternate>
+                                    <MaximumSize Units="I">59</MaximumSize>
+                                    <MaximumWeightInAlternate Units="K">23</MaximumWeightInAlternate>
+                                    <MaximumWeight Units="L">50</MaximumWeight>
+                                </SizeWeightInfo>
+                            </SubCodeProperties>
+                            <SubCodeProperties RPH="4" SolutionSequenceNmbr="1">
+                                <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                                <AncillaryService SubGroupCode="CY">
+                                    <Text>CARRY ON HAND BAGGAGE</Text>
+                                </AncillaryService>
+                                <CommercialNameofBaggageItemType>CARRY ON HAND BAGGAGE</CommercialNameofBaggageItemType>
+                                <EMD_Type>4</EMD_Type>
+                                <ExtendedSubCodeKey>0L5ACG3</ExtendedSubCodeKey>
+                                <RFIC>C</RFIC>
+                            </SubCodeProperties>
+                            <SubCodeProperties RPH="5" SolutionSequenceNmbr="1">
+                                <AncillaryFeeGroupCode>BG</AncillaryFeeGroupCode>
+                                <AncillaryService SubGroupCode="CY">
+                                    <Text>CARRY ON HAND BAGGAGE</Text>
+                                </AncillaryService>
+                                <CommercialNameofBaggageItemType>CARRYON HAND BAGGAGE ALLOWANCE
+                                </CommercialNameofBaggageItemType>
+                                <EMD_Type>4</EMD_Type>
+                                <ExtendedSubCodeKey>0LNABG3</ExtendedSubCodeKey>
+                                <RFIC>C</RFIC>
+                            </SubCodeProperties>
+                        </BaggageInfo>
+                        <HeaderInformation SolutionSequenceNmbr="1">
+                            <DepartureDate>2023-10-23</DepartureDate>
+                            <Text>PRIVATE FARE APPLIED - CHECK RULES FOR CORRECT TICKETING</Text>
+                            <Text>VALIDATING CARRIER SPECIFIED - G3</Text>
+                            <Text>BAG ALLOWANCE -CGHSDU-NIL/G3</Text>
+                            <Text>1STCHECKED BAG FEE-CGHSDU-BRL110.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                            <Text>RAMS</Text>
+                            <Text>2NDCHECKED BAG FEE-CGHSDU-BRL135.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                            <Text>RAMS AND MAX LENGTH UP TO 59 INCHES/150 CENTIMETERS</Text>
+                            <Text>BAG ALLOWANCE -SDUCGH-NIL/G3</Text>
+                            <Text>1STCHECKED BAG FEE-SDUCGH-BRL110.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                            <Text>RAMS</Text>
+                            <Text>2NDCHECKED BAG FEE-SDUCGH-BRL135.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                            <Text>RAMS AND MAX LENGTH UP TO 59 INCHES/150 CENTIMETERS</Text>
+                            <Text>CARRY ON ALLOWANCE</Text>
+                            <Text>CGHSDU SDUCGH-01P/10KG/G3</Text>
+                            <Text>01/CARRY ON HAND BAGGAGE</Text>
+                            <Text>CARRY ON CHARGES</Text>
+                            <Text>CGHSDU SDUCGH-G3-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                            <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                            <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                            <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                            <Text>ELECTRONIC TICKETING ELIGIBLE</Text>
+                            <ValidatingCarrier Code="G3"/>
+                        </HeaderInformation>
+                        <SolutionInformation SolutionSequenceNmbr="1">
+                            <BaseFareCurrencyCode>BRL</BaseFareCurrencyCode>
+                            <CurrencyCode>BRL</CurrencyCode>
+                            <GrandTotalEquivFareAmount>541.80</GrandTotalEquivFareAmount>
+                            <GrandTotalTaxes>83.42</GrandTotalTaxes>
+                            <RequiresRebook>false</RequiresRebook>
+                            <TicketNumber>0</TicketNumber>
+                            <TotalAmount>625.22</TotalAmount>
+                        </SolutionInformation>
+                    </MiscInformation>
+                    <PricedItinerary CurrencyCode="BRL" AlternativePricing="false" MultiTicket="false"
+                                     TotalAmount="625.22">
+                        <AirItineraryPricingInfo SolutionSequenceNmbr="1">
+                            <BaggageProvisions RPH="1">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <NumPiecesBDI>0</NumPiecesBDI>
+                                <ProvisionType>A</ProvisionType>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0DFAAG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="2">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>1</FirstOccurrence>
+                                <LastOccurrence>1</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="110.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="110.00"/>
+                                    <Total>110.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>C</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0C3ACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="3">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>1</FirstOccurrence>
+                                <LastOccurrence>1</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="110.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="110.00"/>
+                                    <Total>110.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>P</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0C3ACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="4">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>2</FirstOccurrence>
+                                <LastOccurrence>2</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="135.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="135.00"/>
+                                    <Total>135.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>C</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0JTACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="5">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>2</FirstOccurrence>
+                                <LastOccurrence>2</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="135.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="135.00"/>
+                                    <Total>135.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>P</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0JTACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="6">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="CGH" RPH="1"/>
+                                    <FlightNumber RPH="1">1003</FlightNumber>
+                                    <OriginLocation LocationCode="SDU" RPH="1"/>
+                                    <PNR_Segment RPH="1">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <NumPiecesBDI>0</NumPiecesBDI>
+                                <ProvisionType>A</ProvisionType>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0DFAAG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="7">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="CGH" RPH="1"/>
+                                    <FlightNumber RPH="1">1003</FlightNumber>
+                                    <OriginLocation LocationCode="SDU" RPH="1"/>
+                                    <PNR_Segment RPH="1">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>1</FirstOccurrence>
+                                <LastOccurrence>1</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="110.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="110.00"/>
+                                    <Total>110.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>C</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0C3ACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="8">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="CGH" RPH="1"/>
+                                    <FlightNumber RPH="1">1003</FlightNumber>
+                                    <OriginLocation LocationCode="SDU" RPH="1"/>
+                                    <PNR_Segment RPH="1">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>1</FirstOccurrence>
+                                <LastOccurrence>1</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="110.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="110.00"/>
+                                    <Total>110.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>P</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0C3ACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="9">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="CGH" RPH="1"/>
+                                    <FlightNumber RPH="1">1003</FlightNumber>
+                                    <OriginLocation LocationCode="SDU" RPH="1"/>
+                                    <PNR_Segment RPH="1">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>2</FirstOccurrence>
+                                <LastOccurrence>2</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="135.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="135.00"/>
+                                    <Total>135.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>C</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0JTACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="10">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>1</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="CGH" RPH="1"/>
+                                    <FlightNumber RPH="1">1003</FlightNumber>
+                                    <OriginLocation LocationCode="SDU" RPH="1"/>
+                                    <PNR_Segment RPH="1">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <Commissionable>N</Commissionable>
+                                <FeeApplicationIndicator>3</FeeApplicationIndicator>
+                                <FeeNotGuaranteedIndicator>N</FeeNotGuaranteedIndicator>
+                                <FirstOccurrence>2</FirstOccurrence>
+                                <LastOccurrence>2</LastOccurrence>
+                                <PassengerType Code="ADT"/>
+                                <PriceInformation>
+                                    <Base CurrencyCode="BRL" Amount="135.00"/>
+                                    <Equiv CurrencyCode="BRL" Amount="135.00"/>
+                                    <Total>135.00</Total>
+                                </PriceInformation>
+                                <ProvisionType>P</ProvisionType>
+                                <RefundForm>1</RefundForm>
+                                <RefundReissue>Y</RefundReissue>
+                                <SubCodeInfo>
+                                    <SubCodeForChargesOthers>0JTACG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                            </BaggageProvisions>
+                            <BaggageProvisions RPH="11">
+                                <Associations>
+                                    <CarrierCode RPH="1">G3</CarrierCode>
+                                    <CarrierCode RPH="2">G3</CarrierCode>
+                                    <CountForSegmentAssociatedID>2</CountForSegmentAssociatedID>
+                                    <DepartureDate RPH="1">2023-10-23</DepartureDate>
+                                    <DepartureDate RPH="2">2023-10-25</DepartureDate>
+                                    <DestinationLocation LocationCode="SDU" RPH="1"/>
+                                    <DestinationLocation LocationCode="CGH" RPH="2"/>
+                                    <FlightNumber RPH="1">1010</FlightNumber>
+                                    <FlightNumber RPH="2">1003</FlightNumber>
+                                    <OriginLocation LocationCode="CGH" RPH="1"/>
+                                    <OriginLocation LocationCode="SDU" RPH="2"/>
+                                    <PNR_Segment RPH="1">2</PNR_Segment>
+                                    <PNR_Segment RPH="2">3</PNR_Segment>
+                                    <ResBookDesigCode RPH="1">B</ResBookDesigCode>
+                                    <ResBookDesigCode RPH="2">O</ResBookDesigCode>
+                                    <StatusCode RPH="1">SS</StatusCode>
+                                    <StatusCode RPH="2">SS</StatusCode>
+                                </Associations>
+                                <CarrierWhoseBaggageProvisionsApply>G3</CarrierWhoseBaggageProvisionsApply>
+                                <NumPiecesBDI>1</NumPiecesBDI>
+                                <NumPiecesITR>1</NumPiecesITR>
+                                <ProvisionType>B</ProvisionType>
+                                <SubCodeInfo>
+                                    <SubCodeForAllowance RPH="1">0L5ACG3</SubCodeForAllowance>
+                                    <SubCodeForChargesOthers>0LNABG3</SubCodeForChargesOthers>
+                                </SubCodeInfo>
+                                <WeightLimit Units="K">10</WeightLimit>
+                            </BaggageProvisions>
+                            <FareCalculation>
+                                <Text>SAO G3 RIO314.90G3 SAO226.90BRL541.80END</Text>
+                            </FareCalculation>
+                            <FareCalculationBreakdown>
+                                <Branch PCC="BJP" FirstJointCarrier="G3"/>
+                                <Departure AirlineCode="G3" CityCode="SAO" AirportCode="CGH" ArrivalCityCode="RIO"
+                                           GenericInd="O" ArrivalAirportCode="SDU"/>
+                                <FareBasis FilingCarrier="G3" FarePassengerType="ADT" TripTypeInd="R" Cabin="Y"
+                                           FareType="N" FareAmount="314.90" Code="BNJAAG2GCP" GlobalInd="WH"
+                                           Market="SAORIO"/>
+                                <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                                <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                                <RuleCategoryIndicator>25</RuleCategoryIndicator>
+                                <RuleCategoryIndicator>35</RuleCategoryIndicator>
+                            </FareCalculationBreakdown>
+                            <FareCalculationBreakdown>
+                                <Branch PCC="BJP" FirstJointCarrier="G3"/>
+                                <Departure AirlineCode="G3" CityCode="RIO" AirportCode="SDU" ArrivalCityCode="SAO"
+                                           GenericInd="O" ArrivalAirportCode="CGH"/>
+                                <FareBasis FilingCarrier="G3" FarePassengerType="ADT" TripTypeInd="R" Cabin="Y"
+                                           FareType="N" FareAmount="226.90" Code="ONJABI2GCP" GlobalInd="WH"
+                                           Market="SAORIO"/>
+                                <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                                <RuleCategoryIndicator>15</RuleCategoryIndicator>
+                                <RuleCategoryIndicator>25</RuleCategoryIndicator>
+                                <RuleCategoryIndicator>35</RuleCategoryIndicator>
+                            </FareCalculationBreakdown>
+                            <ItinTotalFare NonRefundableInd="O">
+                                <BaggageInfo>
+                                    <NonUS_DOT_Disclosure>
+                                        <Text>BAG ALLOWANCE -CGHSDU-NIL/G3</Text>
+                                        <Text>1STCHECKED BAG FEE-CGHSDU-BRL110.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                                        <Text>RAMS</Text>
+                                        <Text>2NDCHECKED BAG FEE-CGHSDU-BRL135.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                                        <Text>RAMS AND MAX LENGTH UP TO 59 INCHES/150 CENTIMETERS</Text>
+                                        <Text>BAG ALLOWANCE -SDUCGH-NIL/G3</Text>
+                                        <Text>1STCHECKED BAG FEE-SDUCGH-BRL110.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                                        <Text>RAMS</Text>
+                                        <Text>2NDCHECKED BAG FEE-SDUCGH-BRL135.00/G3/UP TO 50 POUNDS/23 KILOG</Text>
+                                        <Text>RAMS AND MAX LENGTH UP TO 59 INCHES/150 CENTIMETERS</Text>
+                                        <Text>CARRY ON ALLOWANCE</Text>
+                                        <Text>CGHSDU SDUCGH-01P/10KG/G3</Text>
+                                        <Text>01/CARRY ON HAND BAGGAGE</Text>
+                                        <Text>CARRY ON CHARGES</Text>
+                                        <Text>CGHSDU SDUCGH-G3-CARRY ON FEES UNKNOWN-CONTACT CARRIER</Text>
+                                        <Text>ADDITIONAL ALLOWANCES AND/OR DISCOUNTS MAY APPLY DEPENDING ON</Text>
+                                        <Text>FLYER-SPECIFIC FACTORS /E.G. FREQUENT FLYER STATUS/MILITARY/</Text>
+                                        <Text>CREDIT CARD FORM OF PAYMENT/EARLY PURCHASE OVER INTERNET,ETC./</Text>
+                                    </NonUS_DOT_Disclosure>
+                                </BaggageInfo>
+                                <BaseFare CurrencyCode="BRL" Amount="541.80"/>
+                                <Construction CurrencyCode="BRL" RateOfExchange="4.845700" Amount="541.80"/>
+                                <Endorsements>
+                                    <Text>NONEND/NONTRANS/</Text>
+                                </Endorsements>
+                                <Taxes TotalAmount="83.42">
+                                    <Tax TaxCode="BR3" Amount="83.42" TaxName="EMBARKATION FEE DOMESTIC"
+                                         TicketingTaxCode="BR"/>
+                                </Taxes>
+                                <TotalFare CurrencyCode="BRL" Amount="625.22"/>
+                            </ItinTotalFare>
+                            <PassengerTypeQuantity Quantity="1" Code="ADT"/>
+                            <PTC_FareBreakdown>
+                                <BrandedFareInformation>
+                                    <BrandCode>LT</BrandCode>
+                                    <BrandName>LIGHT</BrandName>
+                                    <ProgramCode>CFFG3</ProgramCode>
+                                    <ProgramName>GOL DOMESTIC</ProgramName>
+                                </BrandedFareInformation>
+                                <Cabin>Y</Cabin>
+                                <FareBasis FilingCarrier="G3" FarePassengerType="ADT" FareType="N" FareAmount="314.90"
+                                           Code="BNJAAG2GCP" GlobalInd="WH" Market="SAORIO"/>
+                                <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                            </PTC_FareBreakdown>
+                            <PTC_FareBreakdown>
+                                <BrandedFareInformation>
+                                    <BrandCode>LT</BrandCode>
+                                    <BrandName>LIGHT</BrandName>
+                                    <ProgramCode>CFFG3</ProgramCode>
+                                    <ProgramName>GOL DOMESTIC</ProgramName>
+                                </BrandedFareInformation>
+                                <Cabin>Y</Cabin>
+                                <FareBasis FilingCarrier="G3" FarePassengerType="ADT" FareType="N" FareAmount="226.90"
+                                           Code="ONJABI2GCP" GlobalInd="WH" Market="SAORIO"/>
+                                <FreeBaggageAllowance>NONIL</FreeBaggageAllowance>
+                            </PTC_FareBreakdown>
+                        </AirItineraryPricingInfo>
+                    </PricedItinerary>
+                </PriceQuote>
+            </OTA_AirPriceRS>
+            <TravelItineraryReadRS>
+                <TravelItinerary>
+                    <CustomerInfo/>
+                    <ItineraryInfo>
+                        <ItineraryPricing>
+                            <PriceQuote RPH="1">
+                                <MiscInformation>
+                                    <GlobalNetRemit>
+                                        <NetFare>
+                                            <BaseFare/>
+                                            <EquivFare/>
+                                            <Taxes/>
+                                            <TotalFare Amount="0.00"/>
+                                        </NetFare>
+                                        <SellingFare>
+                                            <BaseFare/>
+                                            <EquivFare/>
+                                            <Taxes/>
+                                            <TotalFare Amount="0.00"/>
+                                        </SellingFare>
+                                    </GlobalNetRemit>
+                                    <SignatureLine Status="ACTIVE" ExpirationDateTime="00:00" Source="SYS">
+                                        <Text>BJP BJP 4A60 2046/28AUG23</Text>
+                                    </SignatureLine>
+                                </MiscInformation>
+                                <PricedItinerary TaxExempt="false" ValidatingCarrier="G3" DisplayOnly="false" RPH="1"
+                                                 InputMessage="WPMBRL¥P1ADT¥BRLT¥RQ" StatusCode="A"
+                                                 StoredDateTime="2023-08-28T20:46">
+                                    <AirItineraryPricingInfo>
+                                        <ItinTotalFare>
+                                            <BaseFare CurrencyCode="BRL" Amount="541.80"/>
+                                            <Taxes>
+                                                <Tax TaxCode="BR" Amount="83.42"/>
+                                            </Taxes>
+                                            <TotalFare CurrencyCode="BRL" Amount="625.22"/>
+                                            <Totals>
+                                                <BaseFare Amount="541.80"/>
+                                                <Taxes>
+                                                    <Tax Amount="83.42"/>
+                                                </Taxes>
+                                                <TotalFare Amount="625.22"/>
+                                            </Totals>
+                                        </ItinTotalFare>
+                                        <PassengerTypeQuantity Quantity="01" Code="ADT"/>
+                                        <PTC_FareBreakdown>
+                                            <Endorsements>
+                                                <Endorsement type="PRICING_PARAMETER">
+                                                    <Text>WPMBRL$P1ADT$BRLT$RQ</Text>
+                                                </Endorsement>
+                                                <Endorsement type="WARNING">
+                                                    <Text>PRIVATE FARE APPLIED - CHECK RULES FOR CORRECT TICKETING
+                                                    </Text>
+                                                </Endorsement>
+                                                <Endorsement type="WARNING">
+                                                    <Text>VALIDATING CARRIER SPECIFIED - G3</Text>
+                                                </Endorsement>
+                                                <Endorsement type="SYSTEM_ENDORSEMENT">
+                                                    <Text>NONEND/NONTRANS/</Text>
+                                                </Endorsement>
+                                            </Endorsements>
+                                            <FareBasis Code="BNJAAG2GCP/ONJABI2GCP"/>
+                                            <FareCalculation>
+                                                <Text>SAO G3 RIO314.90G3 SAO226.90BRL541.80END</Text>
+                                            </FareCalculation>
+                                            <FlightSegment SegmentNumber="1" Status="OK" DepartureDateTime="10-23T07:30"
+                                                           ConnectionInd="O" FlightNumber="1010" ResBookDesigCode="B">
+                                                <BaggageAllowance Number="NIL"/>
+                                                <FareBasis Code="BNJAAG2GCP"/>
+                                                <MarketingAirline FlightNumber="1010" Code="G3"/>
+                                                <OriginLocation LocationCode="CGH"/>
+                                                <ValidityDates>
+                                                    <NotValidAfter>2023-10-23</NotValidAfter>
+                                                    <NotValidBefore>2023-10-23</NotValidBefore>
+                                                </ValidityDates>
+                                            </FlightSegment>
+                                            <FlightSegment SegmentNumber="2" Status="OK" DepartureDateTime="10-25T06:05"
+                                                           ConnectionInd="O" FlightNumber="1003" ResBookDesigCode="O">
+                                                <BaggageAllowance Number="NIL"/>
+                                                <FareBasis Code="ONJABI2GCP"/>
+                                                <MarketingAirline FlightNumber="1003" Code="G3"/>
+                                                <OriginLocation LocationCode="SDU"/>
+                                                <ValidityDates>
+                                                    <NotValidAfter>2023-10-25</NotValidAfter>
+                                                    <NotValidBefore>2023-10-25</NotValidBefore>
+                                                </ValidityDates>
+                                            </FlightSegment>
+                                            <FlightSegment>
+                                                <OriginLocation LocationCode="CGH"/>
+                                            </FlightSegment>
+                                            <FareComponent TicketDesignator="" GoverningCarrier="G3"
+                                                           FareBasisCode="BNJAAG2GCP" Amount="31490"
+                                                           FareDirectionality="FROM" FareComponentNumber="1">
+                                                <Location Origin="SAO" Destination="RIO"/>
+                                                <Dates DepartureDateTime="10-23T07:30" ArrivalDateTime="10-23T08:35"/>
+                                                <FlightSegmentNumbers>
+                                                    <FlightSegmentNumber>1</FlightSegmentNumber>
+                                                </FlightSegmentNumbers>
+                                            </FareComponent>
+                                            <FareComponent TicketDesignator="" GoverningCarrier="G3"
+                                                           FareBasisCode="ONJABI2GCP" Amount="22690"
+                                                           FareDirectionality="TO" FareComponentNumber="2">
+                                                <Location Origin="RIO" Destination="SAO"/>
+                                                <Dates DepartureDateTime="10-25T06:05" ArrivalDateTime="10-25T07:10"/>
+                                                <FlightSegmentNumbers>
+                                                    <FlightSegmentNumber>2</FlightSegmentNumber>
+                                                </FlightSegmentNumbers>
+                                            </FareComponent>
+                                            <TourCode>
+                                                <Text>CORP</Text>
+                                            </TourCode>
+                                        </PTC_FareBreakdown>
+                                    </AirItineraryPricingInfo>
+                                    <NetTicketingInfo>
+                                        <SellingFareDetails>
+                                            <BaseFare CurrencyCode="BRL" Amount="541.80"/>
+                                            <TotalTax CurrencyCode="BRL" Amount="83.42"/>
+                                            <TotalFare CurrencyCode="BRL" Amount="625.22"/>
+                                            <FareCalc>SAO G3 RIO314.90G3 SAO226.90BRL541.80END</FareCalc>
+                                            <Taxes>
+                                                <Tax TaxCode="BR" Amount="83.42" Exempt="false"/>
+                                            </Taxes>
+                                        </SellingFareDetails>
+                                    </NetTicketingInfo>
+                                </PricedItinerary>
+                                <ResponseHeader>
+                                    <Text>FARE - PRICE RETAINED</Text>
+                                    <Text>FARE USED TO CALCULATE DISCOUNT</Text>
+                                    <Text>FARE NOT GUARANTEED UNTIL TICKETED</Text>
+                                </ResponseHeader>
+                                <PriceQuotePlus TourCode="CORP" VerifyFareCalc="false" NUCSuppresion="false"
+                                                IT_BT_Fare="BT" DomesticIntlInd="I" ManualFare="false"
+                                                SubjToGovtApproval="false" DiscountAmount="0" PricingStatus="S"
+                                                SystemIndicator="S" NegotiatedFare="true" DisplayOnly="false"
+                                                ItineraryChanged="false">
+                                    <TicketingInstructionsInfo/>
+                                </PriceQuotePlus>
+                            </PriceQuote>
+                            <PriceQuoteTotals>
+                                <BaseFare Amount="541.80"/>
+                                <Taxes>
+                                    <Tax Amount="83.42"/>
+                                </Taxes>
+                                <TotalFare Amount="625.22"/>
+                            </PriceQuoteTotals>
+                        </ItineraryPricing>
+                        <ReservationItems>
+                            <Item RPH="1">
+                                <FlightSegment Status="SS" DayOfWeekInd="1" CodeShare="false" NumberInParty="01"
+                                               StopQuantity="00" ElapsedTime="01.05" ResBookDesigCode="B"
+                                               SmokingAllowed="false" AirMilesFlown="0228" SegmentNumber="0001"
+                                               IsPast="false" eTicket="true" DepartureDateTime="2023-10-23T07:30"
+                                               ArrivalDateTime="10-23T08:35" FlightNumber="1010" SpecialMeal="false"
+                                               Id="3">
+                                    <DestinationLocation LocationCode="SDU"/>
+                                    <Equipment AirEquipType="738"/>
+                                    <MarketingAirline FlightNumber="1010" ResBookDesigCode="B" Code="G3">
+                                        <Banner>MARKETED BY GOL LINHAS AEREAS</Banner>
+                                    </MarketingAirline>
+                                    <OperatingAirline FlightNumber="1010" ResBookDesigCode="B" Code="G3">
+                                        <Banner>OPERATED BY GOL LINHAS AEREAS</Banner>
+                                    </OperatingAirline>
+                                    <OperatingAirlinePricing Code="G3"/>
+                                    <DisclosureCarrier DOT="false" Code="G3">
+                                        <Banner>GOL LINHAS AEREAS</Banner>
+                                    </DisclosureCarrier>
+                                    <OriginLocation LocationCode="CGH"/>
+                                    <UpdatedArrivalTime>10-23T08:35</UpdatedArrivalTime>
+                                    <UpdatedDepartureTime>10-23T07:30</UpdatedDepartureTime>
+                                    <Cabin SabreCode="Y" ShortName="ECONOMY" Lang="EN" Code="Y" Name="ECONOMY"/>
+                                </FlightSegment>
+                                <Product>
+                                    <ProductDetails productCategory="AIR">
+                                        <ProductName type="AIR"/>
+                                        <Air sequence="1" segmentAssociationId="2">
+                                            <DepartureAirport>CGH</DepartureAirport>
+                                            <ArrivalAirport>SDU</ArrivalAirport>
+                                            <EquipmentType>738</EquipmentType>
+                                            <MarketingAirlineCode>G3</MarketingAirlineCode>
+                                            <MarketingFlightNumber>1010</MarketingFlightNumber>
+                                            <MarketingClassOfService>B</MarketingClassOfService>
+                                            <Cabin code="Y" name="ECONOMY" shortName="ECONOMY" lang="EN" sabreCode="Y"/>
+                                            <ElapsedTime>65</ElapsedTime>
+                                            <AirMilesFlown>228</AirMilesFlown>
+                                            <FunnelFlight>false</FunnelFlight>
+                                            <ChangeOfGauge>false</ChangeOfGauge>
+                                            <DisclosureCarrier DOT="false" Code="G3">
+                                                <Banner>GOL LINHAS AEREAS</Banner>
+                                            </DisclosureCarrier>
+                                            <Eticket>true</Eticket>
+                                            <DepartureDateTime>2023-10-23T07:30:00</DepartureDateTime>
+                                            <ArrivalDateTime>2023-10-23T08:35:00</ArrivalDateTime>
+                                            <FlightNumber>1010</FlightNumber>
+                                            <ClassOfService>B</ClassOfService>
+                                            <ActionCode>SS</ActionCode>
+                                            <NumberInParty>1</NumberInParty>
+                                            <inboundConnection>false</inboundConnection>
+                                            <outboundConnection>false</outboundConnection>
+                                            <ScheduleChangeIndicator>false</ScheduleChangeIndicator>
+                                            <Pos>
+                                                <IataNumber>0</IataNumber>
+                                                <AgencyCityCode>BJP</AgencyCityCode>
+                                                <CountryCode>BR</CountryCode>
+                                                <DutyCode>4</DutyCode>
+                                                <OACAccountingCityCode>BJP</OACAccountingCityCode>
+                                                <OACAccountingCode>AN</OACAccountingCode>
+                                            </Pos>
+                                        </Air>
+                                    </ProductDetails>
+                                </Product>
+                            </Item>
+                            <Item RPH="2">
+                                <FlightSegment Status="SS" DayOfWeekInd="3" CodeShare="false" NumberInParty="01"
+                                               StopQuantity="00" ElapsedTime="01.05" ResBookDesigCode="O"
+                                               SmokingAllowed="false" AirMilesFlown="0228" SegmentNumber="0002"
+                                               IsPast="false" eTicket="true" DepartureDateTime="2023-10-25T06:05"
+                                               ArrivalDateTime="10-25T07:10" FlightNumber="1003" SpecialMeal="false"
+                                               Id="5">
+                                    <DestinationLocation LocationCode="CGH"/>
+                                    <Equipment AirEquipType="738"/>
+                                    <MarketingAirline FlightNumber="1003" ResBookDesigCode="O" Code="G3">
+                                        <Banner>MARKETED BY GOL LINHAS AEREAS</Banner>
+                                    </MarketingAirline>
+                                    <OperatingAirline FlightNumber="1003" ResBookDesigCode="O" Code="G3">
+                                        <Banner>OPERATED BY GOL LINHAS AEREAS</Banner>
+                                    </OperatingAirline>
+                                    <OperatingAirlinePricing Code="G3"/>
+                                    <DisclosureCarrier DOT="false" Code="G3">
+                                        <Banner>GOL LINHAS AEREAS</Banner>
+                                    </DisclosureCarrier>
+                                    <OriginLocation LocationCode="SDU"/>
+                                    <UpdatedArrivalTime>10-25T07:10</UpdatedArrivalTime>
+                                    <UpdatedDepartureTime>10-25T06:05</UpdatedDepartureTime>
+                                    <Cabin SabreCode="Y" ShortName="ECONOMY" Lang="EN" Code="Y" Name="ECONOMY"/>
+                                </FlightSegment>
+                                <Product>
+                                    <ProductDetails productCategory="AIR">
+                                        <ProductName type="AIR"/>
+                                        <Air sequence="2" segmentAssociationId="3">
+                                            <DepartureAirport>SDU</DepartureAirport>
+                                            <ArrivalAirport>CGH</ArrivalAirport>
+                                            <EquipmentType>738</EquipmentType>
+                                            <MarketingAirlineCode>G3</MarketingAirlineCode>
+                                            <MarketingFlightNumber>1003</MarketingFlightNumber>
+                                            <MarketingClassOfService>O</MarketingClassOfService>
+                                            <Cabin code="Y" name="ECONOMY" shortName="ECONOMY" lang="EN" sabreCode="Y"/>
+                                            <ElapsedTime>65</ElapsedTime>
+                                            <AirMilesFlown>228</AirMilesFlown>
+                                            <FunnelFlight>false</FunnelFlight>
+                                            <ChangeOfGauge>false</ChangeOfGauge>
+                                            <DisclosureCarrier DOT="false" Code="G3">
+                                                <Banner>GOL LINHAS AEREAS</Banner>
+                                            </DisclosureCarrier>
+                                            <Eticket>true</Eticket>
+                                            <DepartureDateTime>2023-10-25T06:05:00</DepartureDateTime>
+                                            <ArrivalDateTime>2023-10-25T07:10:00</ArrivalDateTime>
+                                            <FlightNumber>1003</FlightNumber>
+                                            <ClassOfService>O</ClassOfService>
+                                            <ActionCode>SS</ActionCode>
+                                            <NumberInParty>1</NumberInParty>
+                                            <inboundConnection>false</inboundConnection>
+                                            <outboundConnection>false</outboundConnection>
+                                            <ScheduleChangeIndicator>false</ScheduleChangeIndicator>
+                                            <Pos>
+                                                <IataNumber>0</IataNumber>
+                                                <AgencyCityCode>BJP</AgencyCityCode>
+                                                <CountryCode>BR</CountryCode>
+                                                <DutyCode>4</DutyCode>
+                                                <OACAccountingCityCode>BJP</OACAccountingCityCode>
+                                                <OACAccountingCode>AN</OACAccountingCode>
+                                            </Pos>
+                                        </Air>
+                                    </ProductDetails>
+                                </Product>
+                            </Item>
+                        </ReservationItems>
+                    </ItineraryInfo>
+                    <ItineraryRef PrimeHostID="G3" InhibitCode="U" AirExtras="false" PartitionID="G3">
+                        <Source PseudoCityCode="BJP"/>
+                    </ItineraryRef>
+                </TravelItinerary>
+            </TravelItineraryReadRS>
+        </EnhancedAirBookRS>
+    </soap-env:Body>
+</soap-env:Envelope>

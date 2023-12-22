@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
 
 import math
 
@@ -118,9 +118,7 @@ class Passaro(Ator):
 
         :return: booleano
         """
-        if self.lancar is False:
-            return False
-        return True
+        return self._tempo_de_lancamento is not None
 
     def colidir_com_chao(self):
         """
@@ -145,7 +143,7 @@ class Passaro(Ator):
         :param tempo: tempo de jogo a ser calculada a posição
         :return: posição x, y
         """
-        return 1, 1
+        return self.x, self.y
 
     def lancar(self, angulo, tempo_de_lancamento):
         """
@@ -156,7 +154,10 @@ class Passaro(Ator):
         :param tempo_de_lancamento:
         :return:
         """
-        return True
+        if self.foi_lancado():
+            raise DuploLancamentoExcecao("Pássaro já foi lançado")
+        self._angulo_de_lancamento = math.radians(angulo)
+        self._tempo_de_lancamento = tempo_de_lancamento
 
 
 class PassaroAmarelo(Passaro):
